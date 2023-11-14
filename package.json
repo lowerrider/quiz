@@ -1,4 +1,5 @@
 {
+  "homepage": "https://lowerrider.github.io/quiz/",
   "name": "quiz",
   "version": "0.1.0",
   "private": true,
@@ -80,6 +81,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lowerrider/quiz/issues"
-  },
-  "homepage": "https://lowerrider.github.io/quiz/"
+  }
 }
