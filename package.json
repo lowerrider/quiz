@@ -23,7 +23,7 @@
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start": "webpack serve",
+    "start": "webpack serve --mode development",
     "build": "webpack",
     "build-prod": "webpack --mode=production",
     "clean": "rd /s /q dist"

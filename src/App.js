@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Game from "././ui/Game/Game";
 import Result from "./ui/Result/Result";
 import "./index.scss";
@@ -6,9 +6,9 @@ import { questions } from "./ui/questions/questions";
 import Menu from "./ui/Menu/Menu";
 
 function App() {
-  const [category, setCategory] = React.useState(null);
-  const [step, setStep] = React.useState(0);
-  const [correct, setCorrect] = React.useState(0);
+  const [category, setCategory] = useState(null);
+  const [step, setStep] = useState(0);
+  const [correct, setCorrect] = useState(0);
   const qustion = category && questions[category][step];
 
   const onClickVarioant = (index) => {
@@ -19,6 +19,12 @@ function App() {
     }
   };
 
+  const onBackClick = () => {
+    setCategory(null);
+    setStep(0);
+    setCorrect(0);
+  };
+
   return (
     <div className="App">
       {category ? (
@@ -26,7 +32,7 @@ function App() {
           {step !== questions[category].length ? (
             <Game qustion={qustion} onClickVarioant={onClickVarioant} step={step} questions={questions[category]} />
           ) : (
-            <Result correct={correct} questionsLenght={questions[category].length} />
+            <Result correct={correct} onBackClick={onBackClick} questionsLenght={questions[category].length} />
           )}
         </>
       ) : (
@@ -37,6 +43,3 @@ function App() {
 }
 
 export default App;
-
-// function Menu({setCategory: setCategory}){} === <Menu setCategory={setCategory} />
-// function Menu({setCategory}){}
