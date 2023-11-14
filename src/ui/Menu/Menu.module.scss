@@ -1,0 +1,22 @@
+.butMenu {
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 599px) {
+  .App {
+    width: auto;
+    min-width: 340px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .butMenu {
+    font-size: 16px;
+  }
+}
