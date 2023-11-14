@@ -7,7 +7,7 @@ function Result({ correct, questionsLenght }) {
       <h2>
         Вы отгадали {correct} ответа из {questionsLenght}
       </h2>
-      <a href="/">
+      <a href="https://lowerrider.github.io/quiz/">
         <button>Попробовать снова</button>
       </a>
     </div>
